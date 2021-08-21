@@ -1,7 +1,6 @@
 plugins {
     kotlin("jvm") version "1.5.0"
     id("maven-publish")
-    id("java-library")
 }
 
 group = "me.hwiggy"
