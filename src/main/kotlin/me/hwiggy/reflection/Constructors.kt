@@ -13,7 +13,7 @@ private fun <T : Any> invokeConstructor(
     extractor: (Array<out Class<*>>) -> Constructor<T>,
     paramTypes: Array<out Class<*>> = emptyArray(),
     vararg params: Any?
-): T = extractor(paramTypes).also { it.isAccessible = true }.newInstance(params)
+): T = extractor(paramTypes).also { it.isAccessible = true }.newInstance(*params)
 
 /**
  * Extracts and invokes the Declared Constructor with the specified signature

@@ -17,7 +17,7 @@ private fun <R : Any?> invokeMethod(
     source: Any? = null,
     paramTypes: Array<out Class<*>>,
     vararg params: Any?
-): R = extractor(name, paramTypes).also { it.isAccessible = true }.invoke(source, params) as R
+): R = extractor(name, paramTypes).also { it.isAccessible = true }.invoke(source, *params) as R
 
 /**
  * Invokes the Declared instance Method with the specified name from this type
