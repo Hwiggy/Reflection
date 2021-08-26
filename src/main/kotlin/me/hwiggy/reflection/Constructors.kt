@@ -23,7 +23,7 @@ private fun <T : Any> invokeConstructor(
 fun <T : Any> Class<out T>.declaredConstructor(
     paramTypes: Array<out Class<*>>,
     vararg params: Any?
-): T = invokeConstructor({ this.getDeclaredConstructor(*it) }, paramTypes, params)
+): T = invokeConstructor({ this.getDeclaredConstructor(*it) }, paramTypes, *params)
 
 /**
  * Extracts and invokes the inherited Constructor with the specified signature
